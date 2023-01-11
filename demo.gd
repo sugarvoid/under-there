@@ -10,6 +10,7 @@ extends Node2D
 func _ready() -> void:
 	$Camera2D.player = get_node("Player")
 	$Camera2D.set_up_camera()
+	$Player.connect("on_shoot_pressed", $ProjectileManager, "add_bullet_to_screen")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
