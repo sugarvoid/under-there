@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "ProjectileManager",
 "language": "GDScript",
 "path": "res://projectile_manager.gd"
+}, {
+"base": "Node2D",
+"class": "SpaceTree",
+"language": "GDScript",
+"path": "res://space_tree.gd"
 } ]
 _global_script_class_icons={
 "Player": "",
-"ProjectileManager": ""
+"ProjectileManager": "",
+"SpaceTree": ""
 }
 
 [application]
