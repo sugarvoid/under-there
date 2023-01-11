@@ -11,13 +11,16 @@
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 73, 67 )
+position = Vector2( -89, 75 )
 
 [node name="Level0" parent="." instance=ExtResource( 3 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -64, 64 )
 current = true
 script = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="Camera2D"]
 
 [node name="Jelly" parent="." instance=ExtResource( 5 )]
 position = Vector2( 88, 205 )
