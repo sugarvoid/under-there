@@ -49,6 +49,7 @@ func get_movement_input():
 		pass
 		#$AnimatedSprite.play("default")
 	self.facing_dir = input
+	print(facing_dir)
 	return input
 
 func get_shooting_dir():
@@ -78,6 +79,11 @@ func _process(delta):
 	else:
 		velocity = lerp(velocity, Vector2.ZERO, friction)
 	velocity = move_and_slide(velocity)
+	
+	if self.velocity.x < 0:
+		self.scale.x = scale.y * -1 
+	elif velocity.x > 0:
+		scale.x = scale.y * 1
 
 
 func _rotate_shooting_dir(rot_deg: float) -> void:
