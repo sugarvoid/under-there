@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://camera_main.gd" type="Script" id=2]
+[ext_resource path="res://level_0.tscn" type="PackedScene" id=3]
+[ext_resource path="res://demo.gd" type="Script" id=4]
+[ext_resource path="res://jelly.tscn" type="PackedScene" id=5]
+[ext_resource path="res://jelly.png" type="Texture" id=6]
+
+[node name="Demo" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 73, 67 )
+
+[node name="Level0" parent="." instance=ExtResource( 3 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+script = ExtResource( 2 )
+
+[node name="Jelly" parent="." instance=ExtResource( 5 )]
+position = Vector2( 88, 205 )
+
+[node name="Jelly" parent="Jelly" instance=ExtResource( 5 )]
+position = Vector2( -178, -18 )
+
+[node name="Jelly2" type="Sprite" parent="Jelly"]
+position = Vector2( 93, -161 )
+texture = ExtResource( 6 )
+
+[node name="Jelly3" type="Sprite" parent="Jelly"]
+position = Vector2( 73, -129 )
+texture = ExtResource( 6 )
+
+[node name="Jelly4" type="Sprite" parent="Jelly"]
+position = Vector2( 120, -111 )
+texture = ExtResource( 6 )
