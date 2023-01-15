@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tree.png" type="Texture" id=1]
 [ext_resource path="res://space_tree.gd" type="Script" id=2]
+[ext_resource path="res://fruit.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "shake"
@@ -36,3 +37,14 @@ anims/shake = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2( -0.5, -12 )
 shape = SubResource( 2 )
+
+[node name="FruitContainer" type="Node2D" parent="."]
+
+[node name="Fruit" parent="FruitContainer" instance=ExtResource( 3 )]
+position = Vector2( -6, -15 )
+
+[node name="Fruit2" parent="FruitContainer" instance=ExtResource( 3 )]
+position = Vector2( 4, -20 )
+
+[node name="Fruit3" parent="FruitContainer" instance=ExtResource( 3 )]
+position = Vector2( 0, -18 )

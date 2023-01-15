@@ -12,8 +12,9 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_area_entering_hitbox(node: Node2D) -> void:
-	node.queue_free()
-	self._shake()
+	if node.get_class() == "Projectile":
+		node.queue_free()
+		self._shake()
 
 func _shake() -> void:
 	if !$AnimationPlayer.is_playing():

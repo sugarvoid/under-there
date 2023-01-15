@@ -91,34 +91,35 @@ func _process(delta):
 func _update_stream_lines(movement: Vector2) -> void:
 	match self.facing_dir:
 		Vector2(0, 0):
-			print("not moving")
+			pass
+			#print("not moving")
 			#self.stream_lines.visible = false
 			
 		Vector2(0, -1):
-			print("moving up")
+			#print("moving up")
 			self.stream_lines.rotation_degrees = 90
 		Vector2(0, 1):
-			print("moving down")
+			#print("moving down")
 			self.stream_lines.rotation_degrees = -90
 		Vector2(1, 0):
-			print("moving right")
+			#print("moving right")
 			self.stream_lines.rotation_degrees = 180
 		Vector2(-1, 0):
-			print("moving left")
+			#print("moving left")
 			self.stream_lines.rotation_degrees = -180
 		
 		
 		Vector2(1, 1):
-			print("moving down-right")
+			#print("moving down-right")
 			self.stream_lines.rotation_degrees = -135
 		Vector2(-1, -1):
-			print("moving up-left")
+			#print("moving up-left")
 			self.stream_lines.rotation_degrees = 135
 		Vector2(1, -1):
-			print("moving up-right")
+			#print("moving up-right")
 			self.stream_lines.rotation_degrees = 135
 		Vector2(-1, 1):
-			print("moving down-left")
+			#print("moving down-left")
 			self.stream_lines.rotation_degrees = -135
 
 
