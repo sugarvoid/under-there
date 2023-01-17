@@ -66,9 +66,16 @@ func get_shooting_dir():
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
 		emit_signal("on_shoot_pressed", self)
+	if event.is_action_pressed("scraff"):
+		self.is_scraffing = true
+	if event.is_action_released("scraff"):
+		self.is_scraffing = false
 
 
 func _process(delta):
+	
+	print(self.is_scraffing)
+	
 	### _get_shooting_input()
 	if self.can_move:
 		var direction = get_movement_input()
